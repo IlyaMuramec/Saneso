@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+    <ProjectName>NGETestGUI</ProjectName>
+    <ProjectGuid>{10E80058-3A40-1BDA-863F-0EB5B0E7ABB5}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;P716x_WIN64_LE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\NGETestGUI.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>C:\opencv\opencv\build\include;..\log4cxx\include;..\jsoncpp\include;..\ReadyFlow\include;..\ReadyFlow\win64\include;C:\Program Files (x86)\Cypress\EZ-USB FX3 SDK\1.3\library\cpp\inc;D:\IPP\IPP8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\NGETestGUI.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x1009</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\NGETestGUI.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX64</TargetMachine>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <AdditionalLibraryDirectories>C:\opencv\opencv\build\x64\vc12\lib;..\log4cxx\Release64;..\jsoncpp\Release64;..\ReadyFlow\win64\lib\release;C:\Program Files (x86)\Cypress\EZ-USB FX3 SDK\1.3\library\cpp\lib\x64;D:\IPP\IPP8.2\lib\Release64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core2411.lib;opencv_highgui2411.lib;opencv_imgproc2411.lib;opencv_features2d2411.lib;opencv_flann2411.lib;GdiPlus.lib;log4cxx.lib;jsoncpp.lib;716xrf.lib;716xsfpdp.lib;ptk716xd.lib;cyapi.lib;setupapi.lib;odbc32.lib;odbccp32.lib;ippi.lib;ipps.lib;ippcv.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <PostBuildEvent>
+      <Command>COPY "$(ProjectDir)\log4cxxNGETestGUIConfig.xml" "..\$(ConfigurationName)"
+COPY "$(ProjectDir)\..\log4cxx\Release64\*.dll" "..\$(ConfigurationName)"
+COPY "$(ProjectDir)\..\ReadyFlow\win64\lib\*.dll" "..\$(ConfigurationName)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;P716x_WIN64_LE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\NGETestGUI.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>C:\opencv\opencv\build\include;..\log4cxx\include;..\jsoncpp\include;..\ReadyFlow\include;..\ReadyFlow\win64\include;C:\Program Files (x86)\Cypress\EZ-USB FX3 SDK\1.3\library\cpp\inc;D:\IPP\IPP8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\NGETestGUI.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x1009</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\NGETestGUI.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX64</TargetMachine>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <AdditionalLibraryDirectories>C:\opencv\opencv\build\x64\vc12\lib;..\log4cxx\Debug64;..\jsoncpp\Debug64;..\ReadyFlow\win64\lib\debug;C:\Program Files (x86)\Cypress\EZ-USB FX3 SDK\1.3\library\cpp\lib\x64;D:\IPP\IPP8.2\lib\Release64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core2411d.lib;opencv_highgui2411d.lib;opencv_imgproc2411d.lib;opencv_features2d2411d.lib;opencv_flann2411d.lib;GdiPlus.lib;log4cxx.lib;jsoncpp.lib;716xdrf.lib;716xdsfpdp.lib;ptk716xd.lib;cyapi.lib;setupapi.lib;odbc32.lib;odbccp32.lib;ippi.lib;ipps.lib;ippcv.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmtd.lib; libcmt.lib;</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>COPY "$(ProjectDir)\log4cxxNGETestGUIConfig.xml" "..\$(ConfigurationName)"
+COPY "$(ProjectDir)\..\log4cxx\Debug64\*.dll" "..\$(ConfigurationName)"
+COPY "$(ProjectDir)\..\ReadyFlow\win64\lib\*.dll" "..\$(ConfigurationName)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CameraData.cpp" />
+    <ClCompile Include="CameraSettings.cpp" />
+    <ClCompile Include="CThinPlateSpline.cpp" />
+    <ClCompile Include="CustomSliderCtrl.cpp" />
+    <ClCompile Include="EnhancementControl.cpp" />
+    <ClCompile Include="EnhancementDlg.cpp" />
+    <ClCompile Include="FPGADlg.cpp" />
+    <ClCompile Include="FramesPerSecond.cpp" />
+    <ClCompile Include="HandsetDlg.cpp" />
+    <ClCompile Include="ImageBuilder.cpp" />
+    <ClCompile Include="LaplacianBlending.cpp" />
+    <ClCompile Include="LedButton.cpp" />
+    <ClCompile Include="LightCalSettings.cpp" />
+    <ClCompile Include="LightControl.cpp" />
+    <ClCompile Include="MessageQueue.cpp" />
+    <ClCompile Include="MicroControlDlg.cpp" />
+    <ClCompile Include="MicroController.cpp" />
+    <ClCompile Include="MonitorDC.cpp" />
+    <ClCompile Include="Monitors.cpp" />
+    <ClCompile Include="MosaicData.cpp" />
+    <ClCompile Include="MultiMonitor.cpp" />
+    <ClCompile Include="PasswordDlg.cpp" />
+    <ClCompile Include="PentekReader.cpp" />
+    <ClCompile Include="PictureCtrl.cpp" />
+    <ClCompile Include="ProcTimes.cpp" />
+    <ClCompile Include="MainDlg.cpp" />
+    <ClCompile Include="ProcessingDlg.cpp" />
+    <ClCompile Include="LightingDlg.cpp" />
+    <ClCompile Include="ProgramSettings.cpp" />
+    <ClCompile Include="NGETestGUIApp.cpp" />
+    <ClCompile Include="NGETestGUIDlg.cpp" />
+    <ClCompile Include="CameraDlg.cpp" />
+    <ClCompile Include="ScopeSettings.cpp" />
+    <ClCompile Include="SelectItemDlg.cpp" />
+    <ClCompile Include="SelfCalibration.cpp" />
+    <ClCompile Include="SelfCalibrationDlg.cpp" />
+    <ClCompile Include="SerialPort.cpp" />
+    <ClCompile Include="SplashScreen.cpp" />
+    <ClCompile Include="StatusClasses.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SystemManager.cpp" />
+    <ClCompile Include="SystemManagerDlg.cpp" />
+    <ClCompile Include="Thinning.cpp" />
+    <ClCompile Include="TimingData.cpp" />
+    <ClCompile Include="USBReader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NGETestGUI.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CameraData.h" />
+    <ClInclude Include="CameraSettings.h" />
+    <ClInclude Include="CThinPlateSpline.h" />
+    <ClInclude Include="CustomSliderCtrl.h" />
+    <ClInclude Include="EnhancementControl.h" />
+    <ClInclude Include="EnhancementDlg.h" />
+    <ClInclude Include="FPGADlg.h" />
+    <ClInclude Include="FramesPerSecond.h" />
+    <ClInclude Include="HandsetDlg.h" />
+    <ClInclude Include="ImageBuilder.h" />
+    <ClInclude Include="LaplacianBlending.h" />
+    <ClInclude Include="LedButton.h" />
+    <ClInclude Include="LightCalSettings.h" />
+    <ClInclude Include="LightControl.h" />
+    <ClInclude Include="MessageQueue.h" />
+    <ClInclude Include="MicroControlDlg.h" />
+    <ClInclude Include="MicroController.h" />
+    <ClInclude Include="MonitorDC.h" />
+    <ClInclude Include="Monitors.h" />
+    <ClInclude Include="MosaicData.h" />
+    <ClInclude Include="MultiMonitor.h" />
+    <ClInclude Include="PasswordDlg.h" />
+    <ClInclude Include="PentekReader.h" />
+    <ClInclude Include="PictureCtrl.h" />
+    <ClInclude Include="ProcTimes.h" />
+    <ClInclude Include="MainDlg.h" />
+    <ClInclude Include="ProcessingDlg.h" />
+    <ClInclude Include="LightingDlg.h" />
+    <ClInclude Include="ProgramSettings.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="NGETestGUIApp.h" />
+    <ClInclude Include="NGETestGUIDlg.h" />
+    <ClInclude Include="CameraDlg.h" />
+    <ClInclude Include="ScopeSettings.h" />
+    <ClInclude Include="SelectItemDlg.h" />
+    <ClInclude Include="SelfCalibration.h" />
+    <ClInclude Include="SelfCalibrationDlg.h" />
+    <ClInclude Include="SerialPort.h" />
+    <ClInclude Include="SplashScreen.h" />
+    <ClInclude Include="StatusClasses.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="SystemManager.h" />
+    <ClInclude Include="SystemManagerDlg.h" />
+    <ClInclude Include="Thinning.h" />
+    <ClInclude Include="TimingData.h" />
+    <ClInclude Include="USBReader.h" />
+    <ClInclude Include="Version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\NGETestGUI.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Log4cxxNGETestGUIConfig.xml" />
+    <None Include="resource.hm" />
+    <None Include="res\NGETestGUI.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmapDown.bmp" />
+    <Image Include="res\bitmapDownPressed.bmp" />
+    <Image Include="res\bitmapUp.bmp" />
+    <Image Include="res\bitmapUpPressed.bmp" />
+    <Image Include="res\HandsetDiagram.png" />
+    <Image Include="res\LedBlue.ico" />
+    <Image Include="res\LedGreen.ico" />
+    <Image Include="res\LedNone.ico" />
+    <Image Include="res\LedRed.ico" />
+    <Image Include="res\LedYellow.ico" />
+    <Image Include="res\Saneso-logo-splash.png" />
+    <Image Include="res\Saneso-logo-web-use-v2.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="NGETestGUI.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
