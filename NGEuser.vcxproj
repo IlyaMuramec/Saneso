@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+    <ProjectName>NGEuser</ProjectName>
+    <ProjectGuid>{10E80058-3A40-1BDA-863F-0EB5B0E7ABB5}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfAtl>Dynamic</UseOfAtl>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>..\cef\$(Configuration);..\cef\build\libcef_dll_wrapper\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>..\cef\$(Configuration);..\cef\build\libcef_dll_wrapper\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN64;_WINDOWS;P716x_WIN64_LE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\NGEuser.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>..\opencv-2.4.13.6\include;..\IPP\include;..\jsoncpp172\include;..\log4cxx_javqui\include_copy;..\Cypress FX3 SDK 1.3\inc;..\cef;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\NGEuser.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x1009</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\NGEuser.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX64</TargetMachine>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <AdditionalLibraryDirectories>..\opencv-2.4.13.6\out\build\x64-Release\lib;..\IPP\lib\Release64;..\jsoncpp172\Release;..\Cypress FX3 SDK 1.3\lib\x64;..\log4cxx_javqui\apache-log4cxx-0.10.0\projects\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>lib_json.lib;log4cxx.lib;GdiPlus.lib;cyapi.lib;setupapi.lib;odbc32.lib;odbccp32.lib;ippi.lib;ipps.lib;ippcv.lib;opencv_core2413.lib;opencv_highgui2413.lib;opencv_imgproc2413.lib;libcef.lib;libcef_dll_wrapper.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>COPY "$(ProjectDir)\log4cxxNGEuserConfig.xml" "..\$(ConfigurationName)"</Command>
+    </PostBuildEvent>
+    <Manifest>
+      <EnableDpiAwareness>true</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN64;_WINDOWS;P716x_WIN64_LE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\NGEuser.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>..\opencv-2.4.13.6\include;..\IPP\include;..\jsoncpp172\include;..\log4cxx_javqui\include_copy;..\Cypress FX3 SDK 1.3\inc;..\cef;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\NGEuser.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x1009</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\NGEuser.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX64</TargetMachine>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <AdditionalLibraryDirectories>..\opencv-2.4.13.6\out\build\x64-Debug\lib;..\IPP\lib\Release64;..\jsoncpp172\Debug;..\Cypress FX3 SDK 1.3\lib\x64;..\log4cxx_javqui\apache-log4cxx-0.10.0\projects\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>lib_json.lib;log4cxx.lib;GdiPlus.lib;cyapi.lib;setupapi.lib;odbc32.lib;odbccp32.lib;ippi.lib;ipps.lib;ippcv.lib;opencv_core2413d.lib;opencv_highgui2413d.lib;opencv_imgproc2413d.lib;libcef.lib;libcef_dll_wrapper.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmtd.lib; libcmt.lib;</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>COPY "$(ProjectDir)\log4cxxNGEuserConfig.xml" "..\$(ConfigurationName)"
+</Command>
+    </PostBuildEvent>
+    <Manifest>
+      <EnableDpiAwareness>true</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CameraData.cpp" />
+    <ClCompile Include="CameraSettings.cpp" />
+    <ClCompile Include="CefBrowserDlg.cpp" />
+    <ClCompile Include="cef\CefClientApp.cpp" />
+    <ClCompile Include="cef\CefClientHandler.cpp" />
+    <ClCompile Include="cef\MessageHandler.cpp" />
+    <ClCompile Include="cef\V8Handler.cpp" />
+    <ClCompile Include="CThinPlateSpline.cpp" />
+    <ClCompile Include="CustomSliderCtrl.cpp" />
+    <ClCompile Include="EnhancementControl.cpp" />
+    <ClCompile Include="EnhancementDlg.cpp" />
+    <ClCompile Include="FPGADlg.cpp" />
+    <ClCompile Include="FramesPerSecond.cpp" />
+    <ClCompile Include="HandsetDlg.cpp" />
+    <ClCompile Include="ImageBuilder.cpp" />
+    <ClCompile Include="LaplacianBlending.cpp" />
+    <ClCompile Include="LedButton.cpp" />
+    <ClCompile Include="LightCalSettings.cpp" />
+    <ClCompile Include="LightControl.cpp" />
+    <ClCompile Include="MessageQueue.cpp" />
+    <ClCompile Include="MicroControlDlg.cpp" />
+    <ClCompile Include="MicroController.cpp" />
+    <ClCompile Include="MonitorDC.cpp" />
+    <ClCompile Include="Monitors.cpp" />
+    <ClCompile Include="MosaicData.cpp" />
+    <ClCompile Include="MultiMonitor.cpp" />
+    <ClCompile Include="PasswordDlg.cpp" />
+    <ClCompile Include="PictureCtrl.cpp" />
+    <ClCompile Include="ProcessorBoxSettings.cpp" />
+    <ClCompile Include="ProcTimes.cpp" />
+    <ClCompile Include="MainDlg.cpp" />
+    <ClCompile Include="ProcessingDlg.cpp" />
+    <ClCompile Include="LightingDlg.cpp" />
+    <ClCompile Include="ProgramSettings.cpp" />
+    <ClCompile Include="NGEuserApp.cpp" />
+    <ClCompile Include="NGEuserDlg.cpp" />
+    <ClCompile Include="CameraDlg.cpp" />
+    <ClCompile Include="ScopeSettings.cpp" />
+    <ClCompile Include="ScopeStatus.cpp" />
+    <ClCompile Include="ScreenSelectDlg.cpp" />
+    <ClCompile Include="SelectItemDlg.cpp" />
+    <ClCompile Include="SelfCalibration.cpp" />
+    <ClCompile Include="SelfCalibrationDlg.cpp" />
+    <ClCompile Include="SignalOutput.cpp" />
+    <ClCompile Include="SignalOutputDlg.cpp" />
+    <ClCompile Include="SerialPort.cpp" />
+    <ClCompile Include="SplashScreen.cpp" />
+    <ClCompile Include="StatusClasses.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SystemManager.cpp" />
+    <ClCompile Include="SystemManagerDlg.cpp" />
+    <ClCompile Include="Thinning.cpp" />
+    <ClCompile Include="TimingData.cpp" />
+    <ClCompile Include="USBReader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NGEuser.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CameraData.h" />
+    <ClInclude Include="CameraSettings.h" />
+    <ClInclude Include="CefBrowserDlg.h" />
+    <ClInclude Include="cef\CefClientApp.h" />
+    <ClInclude Include="cef\CefClientHandler.h" />
+    <ClInclude Include="cef\MessageHandler.h" />
+    <ClInclude Include="cef\StdAfx.h" />
+    <ClInclude Include="cef\V8Handler.h" />
+    <ClInclude Include="CThinPlateSpline.h" />
+    <ClInclude Include="CustomSliderCtrl.h" />
+    <ClInclude Include="EnhancementControl.h" />
+    <ClInclude Include="EnhancementDlg.h" />
+    <ClInclude Include="FPGADlg.h" />
+    <ClInclude Include="FramesPerSecond.h" />
+    <ClInclude Include="HandsetDlg.h" />
+    <ClInclude Include="ImageBuilder.h" />
+    <ClInclude Include="LaplacianBlending.h" />
+    <ClInclude Include="LedButton.h" />
+    <ClInclude Include="LightCalSettings.h" />
+    <ClInclude Include="LightControl.h" />
+    <ClInclude Include="MessageQueue.h" />
+    <ClInclude Include="MicroControlDlg.h" />
+    <ClInclude Include="MicroController.h" />
+    <ClInclude Include="MonitorDC.h" />
+    <ClInclude Include="Monitors.h" />
+    <ClInclude Include="MosaicData.h" />
+    <ClInclude Include="MultiMonitor.h" />
+    <ClInclude Include="PasswordDlg.h" />
+    <ClInclude Include="PentekReader.h" />
+    <ClInclude Include="PictureCtrl.h" />
+    <ClInclude Include="ProcessorBoxSettings.h" />
+    <ClInclude Include="ProcTimes.h" />
+    <ClInclude Include="MainDlg.h" />
+    <ClInclude Include="ProcessingDlg.h" />
+    <ClInclude Include="LightingDlg.h" />
+    <ClInclude Include="ProgramSettings.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="NGEuserApp.h" />
+    <ClInclude Include="NGEuserDlg.h" />
+    <ClInclude Include="CameraDlg.h" />
+    <ClInclude Include="ScopeSettings.h" />
+    <ClInclude Include="ScopeStatus.h" />
+    <ClInclude Include="ScreenSelectDlg.h" />
+    <ClInclude Include="SelectItemDlg.h" />
+    <ClInclude Include="SelfCalibration.h" />
+    <ClInclude Include="SelfCalibrationDlg.h" />
+    <ClInclude Include="SignalOutput.h" />
+    <ClInclude Include="SignalOutputDlg.h" />
+    <ClInclude Include="SerialPort.h" />
+    <ClInclude Include="SplashScreen.h" />
+    <ClInclude Include="StatusClasses.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="SystemManager.h" />
+    <ClInclude Include="SystemManagerDlg.h" />
+    <ClInclude Include="Thinning.h" />
+    <ClInclude Include="Timers.h" />
+    <ClInclude Include="TimingData.h" />
+    <ClInclude Include="USBReader.h" />
+    <ClInclude Include="Version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\NGEuser.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Log4cxxNGEuserConfig.xml" />
+    <None Include="resource.hm" />
+    <None Include="res\NGEuser.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmapDown.bmp" />
+    <Image Include="res\bitmapDownPressed.bmp" />
+    <Image Include="res\bitmapUp.bmp" />
+    <Image Include="res\bitmapUpPressed.bmp" />
+    <Image Include="res\HandsetDiagram.png" />
+    <Image Include="res\LedBlue.ico" />
+    <Image Include="res\LedGreen.ico" />
+    <Image Include="res\LedNone.ico" />
+    <Image Include="res\LedRed.ico" />
+    <Image Include="res\LedYellow.ico" />
+    <Image Include="res\Saneso-logo-splash.png" />
+    <Image Include="res\Saneso-logo-web-use-v2.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="NGEuser.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

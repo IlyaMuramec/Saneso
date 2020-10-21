@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<script language="JavaScript">
+
+// Send a query to the browser process.
+function sendMessage(apiObj) {
+  // Results in a call to the OnQuery method.
+   window.cefQuery({
+    request: JSON.stringify(apiObj),
+    onSuccess: function(response) { },
+    onFailure: function(error_code, error_message) {}
+  });
+}
+
+// Getting information from the browser process (notifies)
+function onNotify(apiObj)
+{
+	alert(JSON.stringify(apiObj));
+	
+	if (apiObj.type == "notify")
+	{
+		if (apiObj.cmd == "onChangeGain")
+		{
+			document.getElementById("gain_id").innerHTML = apiObj.value;
+		}
+	}
+	else if (apiObj.type == "confirmation")
+	{
+		
+	}
+}
+
+// API
+
+function guiapi_setViewMode()
+{
+	sendMessage({ cmd:"guiapi_setViewMode", mode:0});
+}
+
+function guiapi_startCalibration()
+{
+	sendMessage({ cmd:"guiapi_startCalibration", mode:0});
+}
+
+function guiapi_videoMode()
+{
+	sendMessage({ cmd:"guiapi_videoMode", mode:0});
+}
+
+function guiapi_videoPlay()
+{
+	sendMessage({ cmd:"guiapi_videoPlay", mode:0, filename:"img3333"});
+}
+
+function guiapi_videoList()
+{
+	sendMessage({ cmd:"guiapi_videoList", pageNum:0, amountPerPage:10});
+}
+
+function guiapi_setLights()
+{
+	sendMessage({ cmd:"guiapi_setLights", front:0, side:1});
+}
+
+function guiapi_start()
+{
+	sendMessage({ cmd:"guiapi_start", mode:0});
+}
+
+function TEST_FAIL_JSON()
+{
+	fail_json = "{123: 123}";
+	
+	window.cefQuery({
+		request: fail_json,
+		onSuccess: function(response) { alert(response);},
+		onFailure: function(error_code, error_message) { }
+	});
+}
+
+function guiapi_nextImageStitchingMode()
+{
+	sendMessage({ cmd:"guiapi_nextImageStitchingMode"});
+}
+
+function guiapi_selectBandImaging()
+{
+	sendMessage({ cmd:"guiapi_selectBandImaging"});
+}
+
+function guiapi_ledFrontAuto()
+{
+	sendMessage({ cmd:"guiapi_ledFrontAuto"});
+}
+
+function guiapi_ledFrontUp()
+{
+	sendMessage({ cmd:"guiapi_ledFrontUp"});
+}
+
+function guiapi_ledFrontDown()
+{
+	sendMessage({ cmd:"guiapi_ledFrontDown"});
+}
+
+function guiapi_setLedFrontValue()
+{
+	value = parseInt(document.getElementById("led_front_value").value);
+	sendMessage({ cmd:"guiapi_setLedFrontValue", pos: value});
+}
+
+function guiapi_recordVideoStart()
+{
+	sendMessage({ cmd:"guiapi_recordVideoStart"});
+}
+
+function guiapi_recordVideoStop()
+{
+	sendMessage({ cmd:"guiapi_recordVideoStop"});
+}
+
+function guiapi_doCapture()
+{
+	sendMessage({ cmd:"guiapi_doCapture"});
+}
+
+function guiapi_doFreezeAction()
+{
+	sendMessage({ cmd:"guiapi_doFreezeAction"});
+}
+
+function guiapi_doLiveAction()
+{
+	sendMessage({ cmd:"guiapi_doLiveAction"});
+}
+
+function guiapi_doMarkersOnOff()
+{
+	sendMessage({ cmd:"guiapi_doMarkersOnOff"});
+}
+
+function guiapi_startSelfCal()
+{
+	sendMessage({ cmd:"guiapi_startSelfCal", ledCameras: false, ledCalCup: false, ledLights: false, ledFPN: false, ledWB: false, ledOverall: false});
+}
+
+function guiapi_exit()
+{
+	sendMessage({ cmd:"guiapi_exit"});
+}
+
+</script>
+<body>
+
+<h2>Saneso</h2>
+
+<!--
+<button type="button" onclick="guiapi_setViewMode()">guiapi_setViewMode</button> <br/>
+<button type="button" onclick="guiapi_startCalibration()">guiapi_startCalibration</button> <br/>
+<button type="button" onclick="guiapi_videoMode()">guiapi_videoMode</button> <br/>
+<button type="button" onclick="guiapi_videoPlay()">guiapi_videoPlay</button> <br/>
+<button type="button" onclick="guiapi_videoList()">guiapi_videoList</button> <br/>
+<button type="button" onclick="guiapi_setLights()">guiapi_setLights</button> <br/>
+<button type="button" onclick="guiapi_start()">guiapi_start</button> <br/>
+
+<button type="button" onclick="TEST_FAIL_JSON()">TEST_FAIL_JSON</button> <br/>
+!-->
+<button type="button" onclick="guiapi_nextImageStitchingMode()">NextImageStitchingMode</button> <br/>
+<button type="button" onclick="guiapi_selectBandImaging()">SelectBandImaging</button> <br/>
+<button type="button" onclick="guiapi_ledFrontAuto()">LedFrontAuto</button> <br/>
+<button type="button" onclick="guiapi_ledFrontUp()">LedFrontUp</button> <br/>
+<button type="button" onclick="guiapi_ledFrontDown()">LedFrontDown</button> <br/>
+<input type="text" id="led_front_value" name="fname"><br>
+<button type="button" onclick="guiapi_setLedFrontValue()">LedFrontValue</button> <br/>
+
+<button type="button" onclick="guiapi_recordVideoStart()">Record Start</button> <br/>
+<button type="button" onclick="guiapi_recordVideoStop()">Record Stop</button> <br/>
+
+<button type="button" onclick="guiapi_doCapture()">Capture</button> <br/>
+
+<button type="button" onclick="guiapi_doFreezeAction()">Freeze</button> <br/>
+<button type="button" onclick="guiapi_doLiveAction()">Live</button> <br/>
+
+<button type="button" onclick="guiapi_doMarkersOnOff()">MarkersOnOff</button> <br/>
+
+<button type="button" onclick="guiapi_startSelfCal()">Calibrate</button> <br/>
+
+<button type="button" onclick="guiapi_exit()">Exit</button> <br/>
+
+<p>Gain: </p>
+<p id="gain_id"></p>
+
+</body>
+</html> 

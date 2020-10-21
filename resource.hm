@@ -1,0 +1,4 @@
+// Microsoft Visual C++ generated Help ID include file.
+// Used by NGETestGUI.rc
+//
+#define HIDC_STATIC                     0x8088ffff    // IDD_FPGA [English]

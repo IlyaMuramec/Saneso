@@ -1,0 +1,4 @@
+#pragma once
+
+#define	IDT_TIMER_CAM_REFRESH	WM_USER + 200
+#define	IDT_TIMER_REFLASH		WM_USER + 201

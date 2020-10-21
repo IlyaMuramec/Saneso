@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="CameraData.cpp" />
+    <ClCompile Include="CameraSettings.cpp" />
+    <ClCompile Include="CThinPlateSpline.cpp" />
+    <ClCompile Include="CustomSliderCtrl.cpp" />
+    <ClCompile Include="EnhancementControl.cpp" />
+    <ClCompile Include="EnhancementDlg.cpp" />
+    <ClCompile Include="FPGADlg.cpp" />
+    <ClCompile Include="FramesPerSecond.cpp" />
+    <ClCompile Include="HandsetDlg.cpp" />
+    <ClCompile Include="ImageBuilder.cpp" />
+    <ClCompile Include="LaplacianBlending.cpp" />
+    <ClCompile Include="LedButton.cpp" />
+    <ClCompile Include="LightCalSettings.cpp" />
+    <ClCompile Include="LightControl.cpp" />
+    <ClCompile Include="MessageQueue.cpp" />
+    <ClCompile Include="MicroControlDlg.cpp" />
+    <ClCompile Include="MicroController.cpp" />
+    <ClCompile Include="MonitorDC.cpp" />
+    <ClCompile Include="Monitors.cpp" />
+    <ClCompile Include="MosaicData.cpp" />
+    <ClCompile Include="MultiMonitor.cpp" />
+    <ClCompile Include="PasswordDlg.cpp" />
+    <ClCompile Include="PictureCtrl.cpp" />
+    <ClCompile Include="ProcessorBoxSettings.cpp" />
+    <ClCompile Include="ProcTimes.cpp" />
+    <ClCompile Include="MainDlg.cpp" />
+    <ClCompile Include="ProcessingDlg.cpp" />
+    <ClCompile Include="LightingDlg.cpp" />
+    <ClCompile Include="ProgramSettings.cpp" />
+    <ClCompile Include="NGEuserApp.cpp" />
+    <ClCompile Include="NGEuserDlg.cpp" />
+    <ClCompile Include="CameraDlg.cpp" />
+    <ClCompile Include="ScopeSettings.cpp" />
+    <ClCompile Include="ScopeStatus.cpp" />
+    <ClCompile Include="ScreenSelectDlg.cpp" />
+    <ClCompile Include="SelectItemDlg.cpp" />
+    <ClCompile Include="SelfCalibration.cpp" />
+    <ClCompile Include="SelfCalibrationDlg.cpp" />
+    <ClCompile Include="SignalOutput.cpp" />
+    <ClCompile Include="SignalOutputDlg.cpp" />
+    <ClCompile Include="SerialPort.cpp" />
+    <ClCompile Include="SplashScreen.cpp" />
+    <ClCompile Include="StatusClasses.cpp" />
+    <ClCompile Include="StdAfx.cpp" />
+    <ClCompile Include="SystemManager.cpp" />
+    <ClCompile Include="SystemManagerDlg.cpp" />
+    <ClCompile Include="Thinning.cpp" />
+    <ClCompile Include="TimingData.cpp" />
+    <ClCompile Include="USBReader.cpp" />
+    <ClCompile Include="cef\CefClientApp.cpp">
+      <Filter>Cef</Filter>
+    </ClCompile>
+    <ClCompile Include="cef\CefClientHandler.cpp">
+      <Filter>Cef</Filter>
+    </ClCompile>
+    <ClCompile Include="CefBrowserDlg.cpp" />
+    <ClCompile Include="cef\V8Handler.cpp">
+      <Filter>Cef</Filter>
+    </ClCompile>
+    <ClCompile Include="cef\MessageHandler.cpp">
+      <Filter>Cef</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CameraData.h" />
+    <ClInclude Include="CameraSettings.h" />
+    <ClInclude Include="CThinPlateSpline.h" />
+    <ClInclude Include="CustomSliderCtrl.h" />
+    <ClInclude Include="EnhancementControl.h" />
+    <ClInclude Include="EnhancementDlg.h" />
+    <ClInclude Include="FPGADlg.h" />
+    <ClInclude Include="FramesPerSecond.h" />
+    <ClInclude Include="HandsetDlg.h" />
+    <ClInclude Include="ImageBuilder.h" />
+    <ClInclude Include="LaplacianBlending.h" />
+    <ClInclude Include="LedButton.h" />
+    <ClInclude Include="LightCalSettings.h" />
+    <ClInclude Include="LightControl.h" />
+    <ClInclude Include="MessageQueue.h" />
+    <ClInclude Include="MicroControlDlg.h" />
+    <ClInclude Include="MicroController.h" />
+    <ClInclude Include="MonitorDC.h" />
+    <ClInclude Include="Monitors.h" />
+    <ClInclude Include="MosaicData.h" />
+    <ClInclude Include="MultiMonitor.h" />
+    <ClInclude Include="PasswordDlg.h" />
+    <ClInclude Include="PentekReader.h" />
+    <ClInclude Include="PictureCtrl.h" />
+    <ClInclude Include="ProcessorBoxSettings.h" />
+    <ClInclude Include="ProcTimes.h" />
+    <ClInclude Include="MainDlg.h" />
+    <ClInclude Include="ProcessingDlg.h" />
+    <ClInclude Include="LightingDlg.h" />
+    <ClInclude Include="ProgramSettings.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="NGEuserApp.h" />
+    <ClInclude Include="NGEuserDlg.h" />
+    <ClInclude Include="CameraDlg.h" />
+    <ClInclude Include="ScopeSettings.h" />
+    <ClInclude Include="ScopeStatus.h" />
+    <ClInclude Include="ScreenSelectDlg.h" />
+    <ClInclude Include="SelectItemDlg.h" />
+    <ClInclude Include="SelfCalibration.h" />
+    <ClInclude Include="SelfCalibrationDlg.h" />
+    <ClInclude Include="SignalOutput.h" />
+    <ClInclude Include="SignalOutputDlg.h" />
+    <ClInclude Include="SerialPort.h" />
+    <ClInclude Include="SplashScreen.h" />
+    <ClInclude Include="StatusClasses.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="SystemManager.h" />
+    <ClInclude Include="SystemManagerDlg.h" />
+    <ClInclude Include="Thinning.h" />
+    <ClInclude Include="Timers.h" />
+    <ClInclude Include="TimingData.h" />
+    <ClInclude Include="USBReader.h" />
+    <ClInclude Include="Version.h" />
+    <ClInclude Include="cef\CefClientApp.h">
+      <Filter>Cef</Filter>
+    </ClInclude>
+    <ClInclude Include="cef\StdAfx.h">
+      <Filter>Cef</Filter>
+    </ClInclude>
+    <ClInclude Include="cef\CefClientHandler.h">
+      <Filter>Cef</Filter>
+    </ClInclude>
+    <ClInclude Include="CefBrowserDlg.h" />
+    <ClInclude Include="cef\V8Handler.h">
+      <Filter>Cef</Filter>
+    </ClInclude>
+    <ClInclude Include="cef\MessageHandler.h">
+      <Filter>Cef</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\NGEuser.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NGEuser.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmapDown.bmp" />
+    <Image Include="res\bitmapDownPressed.bmp" />
+    <Image Include="res\bitmapUp.bmp" />
+    <Image Include="res\bitmapUpPressed.bmp" />
+    <Image Include="res\HandsetDiagram.png" />
+    <Image Include="res\LedBlue.ico" />
+    <Image Include="res\LedGreen.ico" />
+    <Image Include="res\LedNone.ico" />
+    <Image Include="res\LedRed.ico" />
+    <Image Include="res\LedYellow.ico" />
+    <Image Include="res\Saneso-logo-splash.png" />
+    <Image Include="res\Saneso-logo-web-use-v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Log4cxxNGEuserConfig.xml" />
+    <None Include="resource.hm" />
+    <None Include="res\NGEuser.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Cef">
+      <UniqueIdentifier>{e64d0771-f713-4e1c-bb2b-d415bc0e2866}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

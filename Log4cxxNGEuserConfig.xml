@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<!-- Output the log message to system console. -->
+	<appender name="appxConsoleAppender" class="org.apache.log4j.ConsoleAppender">    
+	<param name="Target" value="System.out"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%t] %-5p %c - %m%n"/>
+		</layout>
+
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="WARN" />
+			<param name="LevelMax" value="FATAL" />
+		</filter>
+	</appender>
+
+	<!-- Output the log message to log file -->
+	<!-- Error Log Appender -->
+	<appender name="errorFileRollingAppender" class="org.apache.log4j.rolling.RollingFileAppender">
+	 <rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+		 <param name="FileNamePattern" value="C:\\NGE\\Logs\\NGETestGUIErrorLog-%d{yyyy-MM-dd}.log"/>
+		 <param name="activeFileName" value="C:\\NGE\\Logs\\NGETestGUIErrorLog.log"/>
+		 <param name="MinIndex" value="0"/>
+		 <param name="MaxIndex" value="30"/>
+	 </rollingPolicy>
+
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="WARN" />
+			<param name="LevelMax" value="FATAL" />
+		</filter>
+		
+		<triggeringPolicy class="org.apache.log4j.SizeBasedTriggeringPolicy">
+			<param name="MaxFileSize" value="100000000"/>
+		</triggeringPolicy>
+
+		<param name="file" value="C:\\NGE\\Logs\\NGETestGUIErrorLog.log" />
+		<param name="append" value="true" />
+
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%t] %-5p %c - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Info Log Appender -->
+	<appender name="infoFileRollingAppender" class="org.apache.log4j.rolling.RollingFileAppender">
+		<rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+			<param name="FileNamePattern" value="Logs\\NGETestGUIRunLog-%d{yyyy-MM-dd}.log"/>
+			<param name="activeFileName" value="Logs\\NGETestGUIRunLog.log"/>
+			<param name="MinIndex" value="0"/>
+			<param name="MaxIndex" value="30"/>
+		</rollingPolicy>
+
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="INFO" />
+			<param name="LevelMax" value="FATAL" />
+		</filter>
+
+		<triggeringPolicy class="org.apache.log4j.SizeBasedTriggeringPolicy">
+			<param name="MaxFileSize" value="100000000"/>
+		</triggeringPolicy>
+
+		<param name="file" value="C:\\NGE\\Logs\\NGETestGUIRunLog.log" />
+		<param name="append" value="true" />
+
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%t] %-5p %c - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Debug Log Appender -->
+	<appender name="debugFileRollingAppender" class="org.apache.log4j.rolling.RollingFileAppender">
+		<rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+			<param name="FileNamePattern" value="C:\\NGE\\Logs\\NGETestGUIDebugLog-%d{yyyy-MM-dd}.log"/>
+			<param name="activeFileName" value="C:\\NGE\\Logs\\NGETestGUIDebugLog.log"/>
+			<param name="MinIndex" value="0"/>
+			<param name="MaxIndex" value="30"/>
+		</rollingPolicy>
+			
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="DEBUG" />
+			<param name="LevelMax" value="FATAL" />
+		</filter>
+
+		  <triggeringPolicy class="org.apache.log4j.SizeBasedTriggeringPolicy">
+			  <param name="MaxFileSize" value="100000000"/>
+		  </triggeringPolicy>
+		  
+		<param name="file" value="C:\\NGE\\Logs\\NGETestGUIDebugLog.log" />
+		<param name="append" value="true" />
+
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%t] %-5p %c - %m%n" />
+		</layout>
+	</appender>
+
+	<root>
+		<priority value="all" />
+		<appender-ref ref="debugFileRollingAppender"/>
+		<appender-ref ref="errorFileRollingAppender"/>
+		<appender-ref ref="infoFileRollingAppender"/>
+		<appender-ref ref="appxConsoleAppender"/>
+	</root>
+ </log4j:configuration>
